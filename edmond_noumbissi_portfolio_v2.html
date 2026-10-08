@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio professionnel d'Edmond Noumbissi — Administrateur Système orienté infrastructure, disponibilité des services et IT Service Management.">
+  <meta name="author" content="Edmond Noumbissi">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Edmond Noumbissi — Administrateur Système">
+  <meta property="og:description" content="Infrastructure, systèmes, virtualisation, sauvegarde et IT Service Management.">
+  <meta property="og:image" content="">
+  <title>Edmond Noumbissi | Administrateur Système</title>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Edmond Noumbissi",
+    "jobTitle":"Administrateur Système",
+    "description":"Administrateur Système orienté infrastructure et qualité de service.",
+    "worksFor":{"@type":"Organization","name":"Africa Global Logistics Cameroun"},
+    "sameAs":[]
+  }
+  </script>
+
+  <style>
+    /* =========================================================
+       CONFIGURATION VISUELLE
+       Modifiez les variables ci-dessous pour personnaliser le thème.
+       ========================================================= */
+    :root{
+      --bg:#071019;
+      --bg-soft:#0b1622;
+      --surface:#0f1d2a;
+      --surface-2:#132536;
+      --text:#edf4f8;
+      --muted:#9fb0bd;
+      --line:rgba(255,255,255,.09);
+      --accent:#46c2a8;
+      --accent-2:#64a8ff;
+      --warning:#e8b96a;
+      --danger:#e87878;
+      --shadow:0 24px 70px rgba(0,0,0,.25);
+      --radius:18px;
+      --max:1180px;
+      --nav-h:72px;
+      --font:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    }
+
+    [data-theme="light"]{
+      --bg:#f4f7f9;
+      --bg-soft:#eaf0f4;
+      --surface:#ffffff;
+      --surface-2:#f0f5f7;
+      --text:#12212d;
+      --muted:#5d6d78;
+      --line:rgba(18,33,45,.10);
+      --accent:#087f70;
+      --accent-2:#2467b8;
+      --warning:#9a6815;
+      --shadow:0 24px 60px rgba(31,55,70,.10);
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 20px)}
+    body{
+      margin:0;
+      font-family:var(--font);
+      background:
+        radial-gradient(circle at 85% 5%, rgba(70,194,168,.09), transparent 28rem),
+        radial-gradient(circle at 10% 18%, rgba(100,168,255,.07), transparent 25rem),
+        var(--bg);
+      color:var(--text);
+      line-height:1.65;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea{font:inherit}
+    button{cursor:pointer}
+    img{max-width:100%;display:block}
+    :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    .section{padding:100px 0}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      color:var(--accent);font-size:.78rem;font-weight:800;
+      letter-spacing:.14em;text-transform:uppercase;
+      margin-bottom:12px
+    }
+    .eyebrow::before{content:"";width:22px;height:1px;background:var(--accent)}
+    h1,h2,h3{line-height:1.12;margin:0 0 18px;letter-spacing:-.025em}
+    h1{font-size:clamp(3rem,7vw,6.2rem);max-width:900px}
+    h2{font-size:clamp(2rem,4vw,3.4rem)}
+    h3{font-size:1.25rem}
+    p{margin:0 0 16px;color:var(--muted)}
+    .lead{font-size:1.15rem;max-width:760px}
+    .section-head{max-width:780px;margin-bottom:46px}
+    .section-head p{font-size:1.05rem}
+
+    /* Navigation */
+    header{
+      position:fixed;inset:0 0 auto 0;height:var(--nav-h);z-index:1000;
+      background:color-mix(in srgb,var(--bg) 84%,transparent);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{height:100%;display:flex;align-items:center;justify-content:space-between}
+    .brand{font-weight:900;letter-spacing:-.03em}
+    .brand span{color:var(--accent)}
+    .nav-links{display:flex;align-items:center;gap:22px}
+    .nav-links a{font-size:.88rem;color:var(--muted);transition:.2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--text)}
+    .nav-actions{display:flex;gap:8px;align-items:center}
+    .icon-btn,.menu-btn{
+      border:1px solid var(--line);background:var(--surface);color:var(--text);
+      width:42px;height:42px;border-radius:12px
+    }
+    .menu-btn{display:none}
+
+    /* Buttons */
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:9px;
+      border:1px solid var(--line);padding:12px 18px;border-radius:12px;
+      font-weight:800;font-size:.9rem;transition:.2s;white-space:nowrap
+    }
+    .btn-primary{background:var(--accent);color:#06110f;border-color:var(--accent)}
+    .btn-secondary{background:var(--surface);color:var(--text)}
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    .btn[aria-disabled="true"]{opacity:.55;cursor:not-allowed;transform:none}
+
+    /* Hero */
+    .hero{min-height:100vh;display:grid;align-items:center;padding:150px 0 90px;position:relative;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:70px;align-items:center}
+    .hero h1 span{color:var(--accent)}
+    .hero-kicker{font-weight:800;color:var(--accent-2);margin-bottom:18px}
+    .hero-copy{max-width:720px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0}
+    .ecosystem{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+    .chip{border:1px solid var(--line);background:var(--surface);padding:7px 11px;border-radius:999px;color:var(--muted);font-size:.78rem}
+    .hero-card{
+      border:1px solid var(--line);background:linear-gradient(145deg,var(--surface),var(--surface-2));
+      border-radius:28px;padding:28px;box-shadow:var(--shadow);position:relative
+    }
+    .avatar{
+      width:120px;height:120px;border-radius:50%;margin-bottom:25px;
+      border:1px solid var(--line);background:var(--surface-2);
+      display:grid;place-items:center;font-size:2.2rem;font-weight:900;color:var(--accent)
+    }
+    .profile-label{font-size:.75rem;text-transform:uppercase;letter-spacing:.12em;color:var(--muted)}
+    .profile-value{font-weight:800;margin:4px 0 16px}
+    .availability{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.85rem}
+    .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 15%,transparent)}
+
+    /* Stats */
+    .stats{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--surface)}
+    .stat{padding:28px;border-right:1px solid var(--line)}
+    .stat:last-child{border-right:0}
+    .stat strong{display:block;font-size:1.8rem;letter-spacing:-.04em}
+    .stat span{display:block;color:var(--muted);font-size:.85rem;margin-top:5px}
+
+    /* Generic cards */
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);
+      padding:25px;box-shadow:0 10px 40px rgba(0,0,0,.05)
+    }
+    .card:hover{border-color:color-mix(in srgb,var(--accent) 40%,var(--line))}
+    .card-icon{width:42px;height:42px;border-radius:12px;background:color-mix(in srgb,var(--accent) 12%,transparent);color:var(--accent);display:grid;place-items:center;font-weight:900;margin-bottom:18px}
+    .tag-row{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .tag{font-size:.72rem;padding:5px 8px;border-radius:7px;background:var(--surface-2);color:var(--muted);border:1px solid var(--line)}
+
+    /* About */
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:start}
+    .principles{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .principle{padding:16px;border-left:2px solid var(--accent);background:var(--surface)}
+
+    /* Expertise */
+    .skill-card h3{display:flex;justify-content:space-between;gap:10px}
+    .skill-card small{font-weight:600;color:var(--accent)}
+    .skill-list{list-style:none;padding:0;margin:0}
+    .skill-list li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.9rem}
+    .skill-list li:last-child{border-bottom:0}
+    .skill-list strong{color:var(--text);font-weight:700}
+
+    /* Architecture */
+    .architecture{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:center}
+    .arch-flow{display:grid;gap:8px}
+    .arch-node{
+      padding:16px 20px;border:1px solid var(--line);border-radius:13px;
+      background:var(--surface);display:flex;justify-content:space-between;align-items:center;
+      transition:.2s
+    }
+    .arch-node:hover{transform:translateX(4px);border-color:var(--accent)}
+    .arch-node span{font-size:.78rem;color:var(--muted)}
+    .arch-arrow{text-align:center;color:var(--accent);height:8px;line-height:8px}
+    .arch-details{min-height:360px}
+    .arch-details p{font-size:.95rem}
+    .arch-detail-list{list-style:none;padding:0}
+    .arch-detail-list li{padding:11px 0;border-bottom:1px solid var(--line);color:var(--muted)}
+
+    /* Timeline */
+    .timeline{position:relative;margin-left:12px;padding-left:35px;border-left:1px solid var(--line)}
+    .timeline-item{position:relative;margin-bottom:50px}
+    .timeline-item::before{
+      content:"";position:absolute;left:-42px;top:4px;width:12px;height:12px;border-radius:50%;
+      background:var(--accent);box-shadow:0 0 0 5px color-mix(in srgb,var(--accent) 13%,transparent)
+    }
+    .timeline-meta{color:var(--accent);font-size:.78rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .timeline-title{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    .timeline-title span{color:var(--muted);font-size:.85rem;font-weight:600}
+    .two-col-list{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:18px}
+    .two-col-list ul{margin:0;padding-left:18px;color:var(--muted)}
+
+    /* Projects */
+    .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+    .filter{
+      padding:9px 13px;border-radius:999px;border:1px solid var(--line);
+      background:transparent;color:var(--muted);font-weight:700;font-size:.8rem
+    }
+    .filter.active,.filter:hover{background:var(--accent);color:#06110f;border-color:var(--accent)}
+    .project-card{display:flex;flex-direction:column;height:100%}
+    .project-top{display:flex;justify-content:space-between;gap:12px;margin-bottom:15px}
+    .project-category{font-size:.72rem;color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .project-card .btn{margin-top:auto;align-self:flex-start}
+    .project-result{border-left:2px solid var(--accent);padding-left:12px;margin:16px 0;color:var(--text);font-size:.88rem}
+
+    /* Case studies */
+    .case-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+    .case-step{padding:12px 0;border-bottom:1px solid var(--line)}
+    .case-step:last-child{border-bottom:0}
+    .case-step b{font-size:.72rem;letter-spacing:.1em;color:var(--accent);text-transform:uppercase;display:block;margin-bottom:4px}
+
+    /* ITSM / Coordination */
+    .service-map{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+    .service-box{padding:20px;border:1px solid var(--line);background:var(--surface);border-radius:14px;text-align:center}
+    .service-box strong{display:block;margin-bottom:7px}
+    .service-box span{font-size:.8rem;color:var(--muted)}
+    .trajectory{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:30px}
+    .trajectory-item{padding:20px;border-top:2px solid var(--line);position:relative}
+    .trajectory-item::before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+    .trajectory-item.current{border-color:var(--accent)}
+    .trajectory-item small{color:var(--accent);font-weight:800;text-transform:uppercase;letter-spacing:.08em}
+    .trajectory-item p{font-size:.83rem;margin-top:8px}
+
+    /* Learning */
+    .status{display:inline-block;font-size:.68rem;padding:4px 7px;border-radius:6px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+    .status-obtained{background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent)}
+    .status-progress{background:color-mix(in srgb,var(--accent-2) 15%,transparent);color:var(--accent-2)}
+    .status-target{background:color-mix(in srgb,var(--warning) 15%,transparent);color:var(--warning)}
+
+    /* Contact */
+    .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px}
+    .contact-links{display:grid;gap:10px}
+    .contact-link{padding:15px 17px;border:1px solid var(--line);background:var(--surface);border-radius:12px}
+    .contact-link small{display:block;color:var(--muted);margin-bottom:3px}
+    form{display:grid;gap:13px}
+    label{font-size:.8rem;font-weight:800}
+    input,textarea{
+      width:100%;padding:13px 14px;border-radius:11px;border:1px solid var(--line);
+      background:var(--surface);color:var(--text)
+    }
+    textarea{min-height:140px;resize:vertical}
+    .form-note{font-size:.75rem;color:var(--muted)}
+
+    footer{padding:35px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.78rem}
+    .footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}
+
+    /* Modal */
+    dialog{
+      width:min(850px,calc(100% - 30px));border:1px solid var(--line);border-radius:20px;
+      background:var(--surface);color:var(--text);padding:0;box-shadow:var(--shadow)
+    }
+    dialog::backdrop{background:rgba(0,0,0,.7);backdrop-filter:blur(5px)}
+    .modal-head{padding:24px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:15px}
+    .modal-body{padding:24px;max-height:70vh;overflow:auto}
+    .modal-close{border:1px solid var(--line);background:var(--surface-2);color:var(--text);border-radius:9px;width:36px;height:36px}
+    .modal-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .modal-block{padding:18px;background:var(--surface-2);border-radius:12px}
+    .modal-block h4{margin:0 0 8px;color:var(--accent);font-size:.75rem;text-transform:uppercase;letter-spacing:.08em}
+
+    #topBtn{
+      position:fixed;right:22px;bottom:22px;width:44px;height:44px;border-radius:12px;
+      border:1px solid var(--line);background:var(--surface);color:var(--text);
+      display:none;z-index:900
+    }
+
+    .muted-note{font-size:.78rem;color:var(--muted);font-style:italic}
+    .empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}
+
+    @media(max-width:950px){
+      .hero-grid,.architecture,.contact,.about-grid{grid-template-columns:1fr}
+      .hero{min-height:auto}
+      .stats{grid-template-columns:1fr 1fr}
+      .stat:nth-child(2){border-right:0}
+      .stat:nth-child(-n+2){border-bottom:1px solid var(--line)}
+      .grid-3{grid-template-columns:1fr 1fr}
+      .service-map,.trajectory{grid-template-columns:1fr 1fr}
+    }
+
+    @media(max-width:720px){
+      :root{--nav-h:64px}
+      .container{width:min(var(--max),calc(100% - 28px))}
+      .section{padding:72px 0}
+      .nav-links{
+        position:absolute;top:calc(var(--nav-h) + 1px);left:14px;right:14px;
+        display:none;flex-direction:column;align-items:stretch;padding:14px;
+        background:var(--surface);border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)
+      }
+      .nav-links.open{display:flex}
+      .nav-links a{padding:9px}
+      .menu-btn{display:block}
+      .hero{padding-top:110px}
+      h1{font-size:clamp(2.8rem,14vw,4.5rem)}
+      .grid-2,.grid-3,.case-grid,.modal-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:1fr}
+      .stat{border-right:0;border-bottom:1px solid var(--line)}
+      .stat:last-child{border-bottom:0}
+      .principles{grid-template-columns:1fr}
+      .service-map,.trajectory{grid-template-columns:1fr}
+      .trajectory{gap:18px}
+      .trajectory-item{border-top:1px solid var(--line);border-left:2px solid var(--line)}
+      .footer-inner{align-items:flex-start;flex-direction:column}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
+    }
+
+    /* =========================================================
+       VISUAL REFRESH — chaleureux, moderne, accueillant
+       ========================================================= */
+    :root{
+      --bg:#f5f8fc;
+      --bg-soft:#edf4fb;
+      --surface:#ffffff;
+      --surface-2:#f3f7fb;
+      --text:#102033;
+      --muted:#607184;
+      --line:rgba(16,32,51,.10);
+      --accent:#0ea5e9;
+      --accent-2:#2563eb;
+      --accent-3:#14b8a6;
+      --warning:#f59e0b;
+      --shadow:0 22px 60px rgba(37,99,235,.10);
+      --shadow-soft:0 12px 35px rgba(16,32,51,.07);
+      --radius:20px;
+      --max:1180px;
+    }
+
+    [data-theme="dark"]{
+      --bg:#07111f;
+      --bg-soft:#0b1728;
+      --surface:#0e1d30;
+      --surface-2:#13253a;
+      --text:#eef6ff;
+      --muted:#a6b7c9;
+      --line:rgba(255,255,255,.10);
+      --accent:#22d3ee;
+      --accent-2:#60a5fa;
+      --accent-3:#2dd4bf;
+      --warning:#fbbf24;
+      --shadow:0 24px 70px rgba(0,0,0,.30);
+      --shadow-soft:0 16px 45px rgba(0,0,0,.20);
+    }
+
+    body{
+      background:
+        radial-gradient(circle at 7% 8%, rgba(14,165,233,.11), transparent 23rem),
+        radial-gradient(circle at 92% 15%, rgba(37,99,235,.10), transparent 26rem),
+        radial-gradient(circle at 70% 80%, rgba(20,184,166,.07), transparent 22rem),
+        var(--bg);
+    }
+
+    header{
+      background:color-mix(in srgb,var(--bg) 76%,transparent);
+      border-bottom:1px solid var(--line);
+      box-shadow:0 8px 30px rgba(16,32,51,.04);
+    }
+
+    .brand{
+      display:flex;align-items:center;gap:10px;font-weight:900;
+      letter-spacing:-.03em;
+    }
+    .brand::before{
+      content:"EN";
+      width:38px;height:38px;border-radius:12px;
+      display:grid;place-items:center;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+      color:white;font-size:.78rem;box-shadow:0 10px 25px rgba(37,99,235,.22);
+    }
+    .brand span{display:none}
+
+    .nav-links a{
+      position:relative;font-weight:700;
+    }
+    .nav-links a::after{
+      content:"";position:absolute;left:50%;bottom:-12px;width:0;height:2px;
+      transform:translateX(-50%);border-radius:99px;
+      background:linear-gradient(90deg,var(--accent-2),var(--accent));
+      transition:.25s;
+    }
+    .nav-links a:hover::after,.nav-links a.active::after{width:22px}
+
+    .icon-btn,.menu-btn{
+      background:var(--surface);
+      box-shadow:var(--shadow-soft);
+      border-radius:14px;
+    }
+
+    .hero{
+      min-height:100vh;
+      padding:145px 0 75px;
+      position:relative;
+      isolation:isolate;
+      overflow:hidden;
+      background:
+        linear-gradient(135deg,
+          color-mix(in srgb,var(--accent-2) 8%,transparent),
+          transparent 48%,
+          color-mix(in srgb,var(--accent) 7%,transparent));
+    }
+    .hero::before{
+      content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+      background:
+        linear-gradient(rgba(37,99,235,.045) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(37,99,235,.045) 1px,transparent 1px);
+      background-size:42px 42px;
+      mask-image:linear-gradient(to bottom,black,transparent 85%);
+    }
+    .hero::after{
+      content:"";position:absolute;right:-12rem;top:4rem;width:34rem;height:34rem;
+      border-radius:50%;
+      background:radial-gradient(circle,rgba(14,165,233,.17),transparent 65%);
+      z-index:-1;pointer-events:none;
+      animation:floatGlow 9s ease-in-out infinite alternate;
+    }
+    @keyframes floatGlow{from{transform:translate3d(0,0,0)}to{transform:translate3d(-25px,22px,0)}}
+
+    .hero-grid{gap:55px}
+    .hero-copy{max-width:720px}
+    .hero-kicker{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 12px;border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));
+      background:color-mix(in srgb,var(--surface) 75%,transparent);
+      border-radius:999px;box-shadow:var(--shadow-soft);
+      font-size:.76rem;letter-spacing:.08em;
+    }
+    .hero-kicker::before{
+      content:"";width:8px;height:8px;border-radius:50%;background:var(--accent-3);
+      box-shadow:0 0 0 5px color-mix(in srgb,var(--accent-3) 13%,transparent);
+    }
+    .hero h1{font-size:clamp(3.2rem,7vw,6rem);margin-bottom:12px}
+    .hero h1 span{
+      background:linear-gradient(90deg,var(--accent-2),var(--accent),var(--accent-3));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+    .hero .lead{font-size:1.18rem;max-width:700px}
+    .hero-actions{margin:30px 0 20px}
+    .btn{
+      border-radius:14px;padding:12px 18px;
+      box-shadow:0 5px 18px rgba(16,32,51,.04);
+    }
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+      border-color:transparent;
+      box-shadow:0 12px 25px rgba(37,99,235,.22);
+    }
+    .btn-primary:hover{box-shadow:0 17px 32px rgba(37,99,235,.28)}
+    .btn-secondary{background:color-mix(in srgb,var(--surface) 82%,transparent)}
+    .chip{
+      background:color-mix(in srgb,var(--surface) 78%,transparent);
+      border-color:color-mix(in srgb,var(--accent) 16%,var(--line));
+      box-shadow:var(--shadow-soft);
+    }
+
+    .hero-card{
+      padding:30px;
+      border-radius:30px;
+      background:
+        linear-gradient(145deg,
+          color-mix(in srgb,var(--surface) 94%,transparent),
+          color-mix(in srgb,var(--accent-2) 5%,var(--surface)));
+      border-color:color-mix(in srgb,var(--accent-2) 18%,var(--line));
+      box-shadow:0 30px 75px rgba(37,99,235,.13);
+      overflow:hidden;
+    }
+    .hero-card::before{
+      content:"";position:absolute;right:-55px;top:-55px;width:170px;height:170px;
+      border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      opacity:.11;
+    }
+    .avatar{
+      width:132px;height:132px;border:6px solid var(--surface);
+      background:
+        radial-gradient(circle at 35% 30%,#dff7ff 0 14%,transparent 15%),
+        linear-gradient(135deg,var(--accent-2),var(--accent));
+      color:#fff;box-shadow:0 16px 35px rgba(37,99,235,.22);
+      font-size:2.3rem;position:relative;z-index:1;
+    }
+    .profile-value{font-size:1.02rem}
+    .availability{
+      margin-top:18px;padding:12px 14px;border-radius:14px;
+      background:color-mix(in srgb,var(--accent-3) 9%,var(--surface));
+      border:1px solid color-mix(in srgb,var(--accent-3) 18%,var(--line));
+    }
+
+    .section{padding:92px 0}
+    .section:nth-of-type(even){
+      background:linear-gradient(180deg,transparent,color-mix(in srgb,var(--accent-2) 2.5%,transparent),transparent);
+    }
+    .section-head{margin-bottom:40px}
+    .section-head h2{max-width:850px}
+    .eyebrow{
+      color:var(--accent-2);
+      letter-spacing:.13em;
+    }
+    .eyebrow::before{background:linear-gradient(90deg,var(--accent-2),var(--accent))}
+
+    .stats{
+      border-radius:24px;
+      box-shadow:var(--shadow-soft);
+      background:color-mix(in srgb,var(--surface) 90%,transparent);
+    }
+    .stat{padding:28px 26px;transition:.25s}
+    .stat:hover{background:color-mix(in srgb,var(--accent) 4%,var(--surface));transform:translateY(-3px)}
+    .stat strong{
+      font-size:2.1rem;
+      background:linear-gradient(90deg,var(--accent-2),var(--accent));
+      -webkit-background-clip:text;background-clip:text;color:transparent;
+    }
+
+    .card,.principle,.service-box,.contact-link,.arch-node{
+      box-shadow:var(--shadow-soft);
+      transition:transform .25s,border-color .25s,box-shadow .25s;
+    }
+    .card:hover,.principle:hover,.service-box:hover,.contact-link:hover,.arch-node:hover{
+      transform:translateY(-5px);
+      box-shadow:0 18px 45px rgba(37,99,235,.10);
+      border-color:color-mix(in srgb,var(--accent) 32%,var(--line));
+    }
+    .card-icon{
+      background:linear-gradient(135deg,
+        color-mix(in srgb,var(--accent-2) 14%,transparent),
+        color-mix(in srgb,var(--accent) 14%,transparent));
+      color:var(--accent-2);
+      border:1px solid color-mix(in srgb,var(--accent-2) 14%,transparent);
+    }
+    .principle{border-left:3px solid var(--accent-2);border-radius:0 14px 14px 0}
+
+    .project-card{
+      overflow:hidden;
+      position:relative;
+    }
+    .project-card::before{
+      content:"";height:4px;position:absolute;inset:0 0 auto 0;
+      background:linear-gradient(90deg,var(--accent-2),var(--accent),var(--accent-3));
+      transform:scaleX(.35);transform-origin:left;transition:.3s;
+    }
+    .project-card:hover::before{transform:scaleX(1)}
+    .filter.active,.filter:hover{
+      background:linear-gradient(90deg,var(--accent-2),var(--accent));
+      color:#fff;border-color:transparent;
+    }
+    .project-result{border-left-color:var(--accent-3)}
+
+    .timeline-item::before{
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+    }
+    .timeline-meta,.project-category{color:var(--accent-2)}
+
+    .service-box{
+      border-radius:16px;
+      background:color-mix(in srgb,var(--surface) 92%,transparent);
+    }
+    .trajectory-item.current{border-color:var(--accent-2)}
+    .trajectory-item::before{background:var(--accent-2)}
+
+    .contact-link{border-radius:15px}
+    input,textarea{
+      border-radius:13px;
+      transition:.2s;
+    }
+    input:focus,textarea:focus{
+      border-color:var(--accent-2);
+      box-shadow:0 0 0 4px color-mix(in srgb,var(--accent-2) 10%,transparent);
+      outline:none;
+    }
+
+    footer{
+      background:linear-gradient(135deg,
+        color-mix(in srgb,var(--accent-2) 10%,var(--bg)),
+        color-mix(in srgb,var(--accent) 7%,var(--bg)));
+    }
+
+    #topBtn{
+      border-radius:50%;
+      background:linear-gradient(135deg,var(--accent-2),var(--accent));
+      color:#fff;border:0;box-shadow:0 12px 25px rgba(37,99,235,.22);
+    }
+
+    @media(max-width:720px){
+      .hero{padding-top:105px}
+      .hero::after{right:-18rem;top:12rem}
+      .hero-card{margin-top:10px}
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#accueil" aria-label="Retour à l'accueil">EN<span>.</span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#profil">Profil</a>
+        <a href="#expertise">Expertise</a>
+        <a href="#projets">Projets</a>
+        <a href="#itsm">ITSM</a>
+        <a href="#parcours">Parcours</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-btn" id="themeBtn" aria-label="Changer de thème" title="Changer de thème">☼</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- =======================================================
+         HERO
+         ======================================================= -->
+    <section class="hero" id="accueil">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker">Disponible pour de nouveaux défis · ADMINISTRATEUR SYSTÈME</div>
+          <h1>Edmond <span>Noumbissi</span></h1>
+          <p class="lead">
+            Administrateur Système orienté infrastructure et qualité de service, avec une expérience
+            sur des environnements systèmes, virtualisés, de sauvegarde, Microsoft, réseau et cloud.
+          </p>
+          <p>
+            Mon approche relie la maîtrise technique, la disponibilité des services, l'analyse des incidents
+            et la contribution au pilotage de la qualité IT.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#parcours">Mon parcours →</a>
+            <a class="btn btn-secondary" href="#projets">Voir mes projets</a>
+            <a class="btn btn-secondary" id="cvBtn" href="#" aria-disabled="true">Télécharger mon CV</a>
+            <a class="btn btn-secondary" href="#contact">Me contacter</a>
+          </div>
+          <div class="ecosystem" aria-label="Écosystème technique">
+            <span class="chip">Systems</span>
+            <span class="chip">Infrastructure</span>
+            <span class="chip">Virtualization</span>
+            <span class="chip">Backup</span>
+            <span class="chip">Cloud</span>
+            <span class="chip">ITSM</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Résumé du profil">
+          <div class="avatar" aria-label="Placeholder photo professionnelle">EN</div>
+          <div class="profile-label">Position actuelle</div>
+          <div class="profile-value">Administrateur Système</div>
+          <div class="profile-label">Organisation</div>
+          <div class="profile-value">Africa Global Logistics Cameroun · DSI</div>
+          <div class="profile-label">Positionnement</div>
+          <div class="profile-value">Infrastructure & qualité de service</div>
+          <div class="availability"><span class="dot"></span> Opérations · Infrastructure · Amélioration continue</div>
+          <div class="tag-row" style="margin-top:18px">
+            <span class="tag">VMware</span>
+            <span class="tag">Veeam</span>
+            <span class="tag">Azure</span>
+            <span class="tag">ITSM</span>
+          </div>
+          <p class="muted-note" style="margin-top:18px">Photo, coordonnées et liens personnels : [À COMPLÉTER]</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section" id="impact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Périmètre</div>
+          <h2>Un environnement technique qui dépasse le simple poste d'administration.</h2>
+          <p>Quelques repères factuels sur le périmètre présenté dans ce portfolio.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><strong>300+</strong><span>utilisateurs accompagnés dans l'environnement décrit</span></div>
+          <div class="stat"><strong>5+</strong><span>sites / implantations couverts</span></div>
+          <div class="stat"><strong>300+</strong><span>serveurs physiques et virtuels mentionnés dans le périmètre</span></div>
+          <div class="stat"><strong>N2 / N3</strong><span>niveau de support avancé et administration technique</span></div>
+        </div>
+        <p class="muted-note" style="margin-top:14px">Les indicateurs sont repris du périmètre fourni. Les dates précises et métriques complémentaires restent [À COMPLÉTER] si elles sont destinées à une publication externe.</p>
+      </div>
+    </section>
+
+    <!-- PROFIL -->
+    <section class="section" id="profil">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Profil</div>
+          <h2>Technique d'abord. Service ensuite. Pilotage progressivement.</h2>
+        </div>
+        <div class="about-grid">
+          <div>
+            <p class="lead">
+              Mon parcours se construit autour d'un même enjeu : maintenir un environnement IT fiable
+              tout en comprenant la qualité de service réellement délivrée aux utilisateurs.
+            </p>
+            <p>
+              L'administration système constitue le socle : systèmes, infrastructure, virtualisation,
+              sauvegarde, stockage, Microsoft, réseau et environnements spécifiques. À ce socle s'ajoute
+              une dimension service management avec le suivi des incidents, SLA, KPI, communication,
+              amélioration continue et qualité de service.
+            </p>
+            <p>
+              Mes responsabilités de coordination et de suivi régional complètent cette dimension technique.
+              Elles constituent une étape vers davantage de pilotage, sans prétendre que j'occupe déjà une
+              fonction managériale.
+            </p>
+          </div>
+          <div class="principles">
+            <div class="principle"><strong>Analyse avant action</strong><br><span class="muted-note">Comprendre le problème avant d'appliquer une correction.</span></div>
+            <div class="principle"><strong>Fiabilité</strong><br><span class="muted-note">Privilégier la disponibilité et la continuité du service.</span></div>
+            <div class="principle"><strong>Documentation</strong><br><span class="muted-note">Transformer les incidents et projets en connaissance réutilisable.</span></div>
+            <div class="principle"><strong>Orientation service</strong><br><span class="muted-note">Relier la technique à l'expérience et aux engagements de service.</span></div>
+            <div class="principle"><strong>Amélioration continue</strong><br><span class="muted-note">Identifier les causes, actions et mesures de progrès.</span></div>
+            <div class="principle"><strong>Coordination</strong><br><span class="muted-note">Faire avancer les actions avec les parties prenantes concernées.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERTISE -->
+    <section class="section" id="expertise">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Expertise technique</div>
+          <h2>Un profil infrastructure structuré par domaines.</h2>
+          <p>Les technologies sont présentées selon leur contexte d'exposition, sans jauges artificielles de compétence.</p>
+        </div>
+        <div class="grid-3" id="skillsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE -->
+    <section class="section" id="architecture">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Environnement</div>
+          <h2>Comprendre l'écosystème avant de parler d'outils.</h2>
+          <p>Schéma conceptuel volontairement non sensible : il représente les grandes briques sans exposer l'architecture interne d'AGL.</p>
+        </div>
+        <div class="architecture">
+          <div class="arch-flow" id="archFlow"></div>
+          <div class="card arch-details" id="archDetails">
+            <div class="card-icon">↗</div>
+            <h3>Architecture conceptuelle</h3>
+            <p>Sélectionnez une brique pour afficher les technologies et responsabilités associées.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Expérience</div>
+          <h2>Un parcours centré sur l'exploitation et l'évolution des services IT.</h2>
+          <p>Les dates non présentes dans les informations disponibles restent volontairement à compléter.</p>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">Expérience actuelle · [DATES À COMPLÉTER]</div>
+            <div class="timeline-title">
+              <h3>Administrateur Système — Africa Global Logistics Cameroun</h3>
+              <span>Direction des Systèmes d'Information</span>
+            </div>
+            <p>
+              Administration et maintien en condition opérationnelle d'un environnement infrastructure
+              multi-sites, avec contribution au support avancé, à la disponibilité des services et aux projets techniques.
+            </p>
+            <div class="two-col-list">
+              <div>
+                <strong>Responsabilités</strong>
+                <ul>
+                  <li>Administration système et infrastructure</li>
+                  <li>Support N2/N3</li>
+                  <li>Virtualisation VMware</li>
+                  <li>Backup et restauration Veeam</li>
+                  <li>Microsoft 365 / Azure</li>
+                  <li>Réseau, sécurité et salles serveurs</li>
+                  <li>Disponibilité des services</li>
+                </ul>
+              </div>
+              <div>
+                <strong>Contributions</strong>
+                <ul>
+                  <li>Déploiement et maintien de Guacamole</li>
+                  <li>Participation à des projets infrastructure</li>
+                  <li>Contribution à l'analyse d'incidents</li>
+                  <li>Coordination Run IT régionale</li>
+                  <li>Suivi KPI / SLA</li>
+                  <li>COPIQ et amélioration continue</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projets">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Projets & réalisations</div>
+          <h2>Les preuves comptent davantage que les listes de technologies.</h2>
+          <p>Les projets ci-dessous sont structurés pour distinguer contexte, rôle, environnement et résultat. Les éléments non suffisamment documentés sont explicitement signalés.</p>
+        </div>
+        <div class="filters" id="projectFilters" role="group" aria-label="Filtrer les projets"></div>
+        <div class="grid-3" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- CASE STUDIES -->
+    <section class="section" id="cas">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Case studies</div>
+          <h2>Raisonner avant de corriger.</h2>
+          <p>Les études de cas montrent la manière d'aborder un problème sans transformer les informations manquantes en faits inventés.</p>
+        </div>
+        <div class="case-grid" id="caseGrid"></div>
+      </div>
+    </section>
+
+    <!-- ITSM -->
+    <section class="section" id="itsm">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">IT Service Management</div>
+          <h2>L'IT ne se limite pas à faire fonctionner les serveurs.</h2>
+          <p>
+            Mon expérience ITSM est présentée comme une application opérationnelle : incidents, SLA, KPI,
+            communication, amélioration et coordination.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card">
+            <div class="card-icon">01</div>
+            <h3>Incident Management</h3>
+            <p>Analyse, résolution, escalade, suivi et communication autour des incidents.</p>
+            <div class="tag-row"><span class="tag">Incident</span><span class="tag">Escalade</span><span class="tag">Communication</span></div>
+          </article>
+          <article class="card">
+            <div class="card-icon">02</div>
+            <h3>Performance de service</h3>
+            <p>Suivi des SLA et KPI, analyse des tendances et identification des points de faiblesse.</p>
+            <div class="tag-row"><span class="tag">SLA</span><span class="tag">KPI</span><span class="tag">Reporting</span></div>
+          </article>
+          <article class="card">
+            <div class="card-icon">03</div>
+            <h3>Amélioration continue</h3>
+            <p>Plans d'action, suivi des actions, harmonisation des pratiques et retour d'expérience.</p>
+            <div class="tag-row"><span class="tag">COPIQ</span><span class="tag">Actions</span><span class="tag">Qualité</span></div>
+          </article>
+        </div>
+        <div class="service-map">
+          <div class="service-box"><strong>Situation</strong><span>Comprendre le contexte et l'impact</span></div>
+          <div class="service-box"><strong>Analyse</strong><span>Identifier les causes et écarts</span></div>
+          <div class="service-box"><strong>Action</strong><span>Coordonner la réponse</span></div>
+          <div class="service-box"><strong>Amélioration</strong><span>Capitaliser et prévenir la répétition</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COORDINATION -->
+    <section class="section" id="coordination">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Coordination & pilotage</div>
+          <h2>Élargir le périmètre sans brûler les étapes.</h2>
+          <p>
+            Les responsabilités de coordination sont présentées comme une extension du socle technique,
+            pas comme une fonction managériale déjà acquise.
+          </p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="card-icon">R</div><h3>Run IT régional</h3><p>Suivi de performance, coordination, harmonisation des pratiques et contribution à la qualité de service.</p></article>
+          <article class="card"><div class="card-icon">K</div><h3>KPI & SLA</h3><p>Lecture des indicateurs, identification des écarts et contribution au suivi des actions correctives.</p></article>
+          <article class="card"><div class="card-icon">C</div><h3>COPIQ</h3><p>Contribution au pilotage qualité, au suivi des actions et à l'amélioration des processus de service.</p></article>
+          <article class="card"><div class="card-icon">P</div><h3>Projets transverses</h3><p>Participation et coordination technique sur des sujets impliquant plusieurs équipes.</p></article>
+          <article class="card"><div class="card-icon">A</div><h3>Actions</h3><p>Structuration d'actions selon une logique Qui / Fait / Quoi / Quand et suivi jusqu'à finalisation.</p></article>
+          <article class="card"><div class="card-icon">I</div><h3>Parties prenantes</h3><p>Communication avec les équipes techniques et métiers concernées par les services IT.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section class="section" id="impact-real">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Réalisations & impact</div>
+          <h2>Ce qui peut être affirmé, et ce qui doit encore être documenté.</h2>
+        </div>
+        <div class="grid-2">
+          <article class="card">
+            <h3>Déploiement et maintien de Guacamole</h3>
+            <p><strong>Contexte :</strong> besoin d'accès distant dans l'environnement IT.</p>
+            <p><strong>Action :</strong> déploiement puis maintien de la solution.</p>
+            <p><strong>Impact :</strong> contribution à la disponibilité d'un moyen d'accès distant.</p>
+            <p class="muted-note">Indicateur quantitatif d'usage / gain : [À COMPLÉTER]</p>
+          </article>
+          <article class="card">
+            <h3>Performance Run IT régional</h3>
+            <p><strong>Contexte :</strong> suivi des performances de support au niveau régional.</p>
+            <p><strong>Action :</strong> suivi des KPI, coordination et amélioration des pratiques.</p>
+            <p><strong>Impact :</strong> région classée en tête du périmètre suivi sur la période documentée.</p>
+            <p class="muted-note">Période et indicateurs détaillés à publier : [À COMPLÉTER]</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARCOURS -->
+    <section class="section" id="parcours">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Parcours & évolution</div>
+          <h2>Une trajectoire, pas un titre inventé.</h2>
+          <p>La trajectoire ci-dessous représente une ambition professionnelle à partir du socle actuel.</p>
+        </div>
+        <div class="trajectory">
+          <div class="trajectory-item current"><small>Aujourd'hui</small><h3>Administrateur Système</h3><p>Infrastructure, systèmes, exploitation et support avancé.</p></div>
+          <div class="trajectory-item"><small>Développement</small><h3>Expertise Infrastructure</h3><p>Approfondissement virtualisation, backup, cloud et architecture.</p></div>
+          <div class="trajectory-item"><small>Prochaine étape</small><h3>Coordination / Pilotage IT</h3><p>Responsabilités élargies, performance et projets transverses.</p></div>
+          <div class="trajectory-item"><small>Vision long terme</small><h3>Management SI</h3><p>Évolution vers le pilotage des systèmes d'information.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FORMATION / LEARNING -->
+    <section class="section" id="learning">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Formation & learning</div>
+          <h2>Construire les compétences avant de revendiquer les titres.</h2>
+          <p>Les objectifs sont séparés des éléments obtenus afin d'éviter toute ambiguïté.</p>
+        </div>
+        <div class="grid-3" id="learningGrid"></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Contact</div>
+          <h2>Parlons infrastructure, opérations ou évolution IT.</h2>
+          <p>Les coordonnées personnelles ne sont pas inventées. Remplacez les placeholders dans la configuration.</p>
+        </div>
+        <div class="contact">
+          <div class="contact-links">
+            <a class="contact-link" id="emailLink" href="#"><small>Email</small><strong id="emailText">[À COMPLÉTER]</strong></a>
+            <a class="contact-link" id="phoneLink" href="#"><small>Téléphone</small><strong id="phoneText">[À COMPLÉTER]</strong></a>
+            <a class="contact-link" id="linkedinLink" href="#" target="_blank" rel="noopener"><small>LinkedIn</small><strong id="linkedinText">[À COMPLÉTER]</strong></a>
+            <div class="contact-link"><small>Localisation</small><strong id="locationText">Douala, Cameroun · [À CONFIRMER]</strong></div>
+          </div>
+          <div class="card">
+            <form id="contactForm">
+              <div><label for="name">Nom</label><input id="name" name="name" required autocomplete="name"></div>
+              <div><label for="email">Email</label><input id="contactEmail" name="email" type="email" required autocomplete="email"></div>
+              <div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div>
+              <button class="btn btn-primary" type="submit">Préparer l'email →</button>
+              <p class="form-note">Formulaire sans backend : il ouvre le client email configuré sur votre appareil.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Edmond Noumbissi. Portfolio professionnel.</span>
+      <span>Infrastructure · Systems · IT Service Management</span>
+    </div>
+  </footer>
+
+  <button id="topBtn" aria-label="Retour en haut">↑</button>
+
+  <dialog id="projectModal">
+    <div class="modal-head">
+      <div><div class="project-category" id="modalCategory"></div><h3 id="modalTitle"></h3></div>
+      <button class="modal-close" id="modalClose" aria-label="Fermer">×</button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </dialog>
+
+  <script>
+    /* =========================================================
+       CONFIGURATION DU PORTFOLIO
+       ---------------------------------------------------------
+       Modifiez principalement cet objet pour personnaliser
+       le portfolio. Les éléments non disponibles sont marqués
+       [À COMPLÉTER] plutôt que d'être inventés.
+       ========================================================= */
+    const CONFIG = {
+      profile: {
+        name: "Edmond Noumbissi",
+        role: "Administrateur Système",
+        organization: "Africa Global Logistics Cameroun — DSI",
+        location: "Douala, Cameroun",
+        email: "[À COMPLÉTER]",
+        phone: "[À COMPLÉTER]",
+        linkedin: "[À COMPLÉTER]",
+        github: "[À COMPLÉTER]",
+        cv: "[À COMPLÉTER]",
+        photo: "", // Exemple : "assets/edmond.jpg" — laisser vide pour conserver le monogramme EN
+        headline: "Infrastructure, systèmes et qualité de service",
+        summary: "Administrateur Système orienté infrastructure et qualité de service, capable de relier les problématiques techniques au fonctionnement et à l'amélioration des services IT."
+      },
+
+      stats: [
+        {value:"+300", label:"utilisateurs accompagnés"},
+        {value:"5+", label:"sites / implantations"},
+        {value:"+300", label:"serveurs physiques et virtuels"},
+        {value:"N2 / N3", label:"support technique avancé"}
+      ],
+
+      skills: [
+        {
+          title:"Systèmes",
+          exposure:"Expérience opérationnelle",
+          items:["Windows Server","Linux","Active Directory","Microsoft 365","Gestion des identités et accès"]
+        },
+        {
+          title:"Virtualisation",
+          exposure:"Expérience opérationnelle",
+          items:["VMware ESXi","VMware vSphere","Gestion de VM","Environnements virtualisés","Stockage associé"]
+        },
+        {
+          title:"Backup & continuité",
+          exposure:"Expérience opérationnelle",
+          items:["Veeam Backup & Replication","Repositories","Proxies","Sauvegarde","Restauration","Tests de restauration","Tape Library"]
+        },
+        {
+          title:"Stockage",
+          exposure:"Expérience opérationnelle",
+          items:["Dell PowerStore","SAN","Capacité","Performance","Gestion des datastores"]
+        },
+        {
+          title:"Réseau & sécurité",
+          exposure:"Environnement de travail",
+          items:["Cisco","Fortinet","Firewall","Flux réseau","Segmentation","Sécurité infrastructure"]
+        },
+        {
+          title:"Cloud",
+          exposure:"Expérience + développement",
+          items:["Microsoft Azure","Azure Stack HCI","Hybrid Cloud","Transformation des infrastructures"]
+        },
+        {
+          title:"Monitoring",
+          exposure:"Contexte infrastructure",
+          items:["Supervision","Disponibilité","Capacité","Analyse d'incidents","Performance infrastructure"]
+        },
+        {
+          title:"Environnements spécifiques",
+          exposure:"Exposition opérationnelle",
+          items:["AS400 / IBM i"]
+        },
+        {
+          title:"Service Management",
+          exposure:"Responsabilités de coordination",
+          items:["Incident Management","SLA","KPI","Reporting","Communication d'incident","Amélioration continue"]
+        }
+      ],
+
+      architecture: [
+        {id:"users", title:"Utilisateurs", detail:"Point de départ du service IT : besoins, incidents, accès et expérience utilisateur.", tech:["Support N2/N3","Microsoft 365","Gestion des accès"]},
+        {id:"network", title:"Réseau / Sécurité", detail:"Couche de connectivité et de contrôle des flux, présentée sans détails sensibles.", tech:["Cisco","Fortinet","Firewall","Flux réseau","Segmentation"]},
+        {id:"infra", title:"Infrastructure", detail:"Socle d'exploitation comprenant serveurs, équipements et salles serveurs.", tech:["Serveurs physiques et virtuels","Salles serveurs","Disponibilité","Capacité"]},
+        {id:"virtual", title:"Virtualisation", detail:"Couche de virtualisation utilisée pour les environnements de machines virtuelles.", tech:["VMware ESXi","VMware vSphere","VM","Datastores"]},
+        {id:"storage", title:"Stockage", detail:"Gestion du stockage associé aux environnements virtualisés.", tech:["Dell PowerStore","SAN","Datastores","Capacité / performance"]},
+        {id:"backup", title:"Backup", detail:"Protection des données et capacité de restauration.", tech:["Veeam","Repositories","Proxies","Tape Library","Tests de restauration"]},
+        {id:"cloud", title:"Cloud / Hybrid Cloud", detail:"Évolution vers des modèles cloud et hybrides.", tech:["Microsoft Azure","Azure Stack HCI","Transformation infrastructure"]}
+      ],
+
+      projects: [
+        {
+          id:"guacamole",
+          title:"Déploiement & maintien de Guacamole",
+          category:["Infrastructure","Systèmes"],
+          context:"Mise en place d'une solution d'accès distant dans l'environnement IT.",
+          problem:"Besoin d'un moyen d'accès distant adapté à l'exploitation.",
+          role:"Déploiement et maintien de la solution.",
+          technologies:["Apache Guacamole","Accès distant"],
+          approach:"Déploiement de la solution puis maintien en condition opérationnelle.",
+          result:"Contribution à la disponibilité d'un moyen d'accès distant.",
+          impact:"Résultat qualitatif documenté ; indicateur d'usage ou de gain : [À COMPLÉTER].",
+          skills:["Administration","Disponibilité","Support"]
+        },
+        {
+          id:"vmware",
+          title:"Administration de l'environnement VMware",
+          category:["Virtualisation","Infrastructure"],
+          context:"Environnement virtualisé local avec VMware et stockage associé.",
+          problem:"Maintenir la disponibilité et l'exploitation d'un parc de machines virtuelles.",
+          role:"Administration et opérations sur l'environnement virtualisé.",
+          technologies:["VMware ESXi","VMware vSphere","Datastores","Dell PowerStore"],
+          approach:"Administration des hôtes, VM et stockage associé selon les opérations nécessaires.",
+          result:"Contribution au maintien de l'environnement virtualisé.",
+          impact:"Métriques de disponibilité et de capacité : [À COMPLÉTER].",
+          skills:["Virtualisation","Stockage","Exploitation"]
+        },
+        {
+          id:"veeam",
+          title:"Infrastructure Veeam Backup",
+          category:["Backup","Infrastructure"],
+          context:"Environnement de sauvegarde Veeam avec serveurs, proxies et repositories.",
+          problem:"Assurer la protection et la restauration des environnements concernés.",
+          role:"Administration et exploitation de l'infrastructure de sauvegarde.",
+          technologies:["Veeam Backup & Replication","Repository","Proxy","Quantum DXi","Tape Library"],
+          approach:"Suivi des jobs, exploitation de la chaîne de sauvegarde et opérations de restauration/test.",
+          result:"Contribution à la capacité de sauvegarde et de restauration.",
+          impact:"Taux de réussite / RPO / RTO détaillés : [À COMPLÉTER].",
+          skills:["Backup","Restore","Continuité"]
+        },
+        {
+          id:"restore",
+          title:"Tests de restauration",
+          category:["Backup","Projet"],
+          context:"Validation de la capacité à restaurer des données ou environnements sauvegardés.",
+          problem:"Une sauvegarde n'a de valeur opérationnelle que si la restauration est maîtrisée.",
+          role:"Participation aux opérations et vérifications de restauration.",
+          technologies:["Veeam","Tape Library","Restauration"],
+          approach:"Exécution et vérification des opérations de restauration dans un cadre contrôlé.",
+          result:"Contribution à la validation de la capacité de restauration.",
+          impact:"Résultats détaillés par test : [À COMPLÉTER].",
+          skills:["Analyse","Backup","Résilience"]
+        },
+        {
+          id:"serverrooms",
+          title:"Exploitation des salles serveurs",
+          category:["Infrastructure"],
+          context:"Deux salles serveurs avec équipements informatiques et dispositifs de support à la disponibilité.",
+          problem:"Maintenir un environnement physique compatible avec la disponibilité des services.",
+          role:"Responsabilité d'exploitation et de suivi de l'environnement des salles serveurs.",
+          technologies:["Serveurs","Racks","Stockage","AS400","Switches","UPS","Climatisation","Détection"],
+          approach:"Suivi de l'environnement physique, énergie, température et équipements.",
+          result:"Contribution au maintien des conditions d'exploitation de l'infrastructure.",
+          impact:"Indicateurs d'incidents physiques / disponibilité : [À COMPLÉTER].",
+          skills:["Infrastructure","Disponibilité","Exploitation"]
+        },
+        {
+          id:"as400",
+          title:"Environnement AS400 / IBM i",
+          category:["Systèmes","Projet"],
+          context:"Infrastructure AS400 / IBM i hébergée dans l'environnement concerné.",
+          problem:"Exploitation, sauvegarde et coordination autour d'un environnement spécifique.",
+          role:"Contribution infrastructure et opérations de sauvegarde / restauration.",
+          technologies:["AS400 / IBM i","V7R3M0","Tape"],
+          approach:"Opérations d'infrastructure, analyse d'alertes et coordination avec les parties prenantes.",
+          result:"Contribution à l'exploitation de l'environnement IBM i.",
+          impact:"Périmètre applicatif et résultats détaillés : [À COMPLÉTER].",
+          skills:["IBM i","Backup","Coordination"]
+        },
+        {
+          id:"major-incidents",
+          title:"Amélioration de la gestion des incidents majeurs",
+          category:["ITIL","Coordination"],
+          context:"Travail d'amélioration du processus de gestion des incidents majeurs à la suite d'un incident.",
+          problem:"Identifier les insuffisances du processus et structurer les réponses attendues.",
+          role:"Contribution à l'analyse, à la formalisation des réponses et au suivi du plan d'action.",
+          technologies:["ITIL","SBI","Communication","Catalogue de service"],
+          approach:"Analyse de la situation, identification des écarts, actions Qui/Fait/Quoi/Quand et suivi COPIQ.",
+          result:"Structuration d'un plan d'amélioration du processus.",
+          impact:"Évaluation quantitative après mise en œuvre : [À COMPLÉTER].",
+          skills:["Major Incident","Process","Improvement"]
+        },
+        {
+          id:"copiq",
+          title:"COPIQ — qualité de service",
+          category:["ITIL","Coordination"],
+          context:"Comité de pilotage qualité orienté performance des services DSI.",
+          problem:"Suivre les incidents, demandes, délais, satisfaction et actions d'amélioration.",
+          role:"Pilotage / contribution au suivi de la performance et à la préparation des analyses.",
+          technologies:["KPI","SLA","Reporting","ITIL"],
+          approach:"Analyse des indicateurs, identification des écarts, préparation des actions et suivi jusqu'à finalisation.",
+          result:"Contribution au pilotage de l'amélioration continue de la qualité de service.",
+          impact:"Indicateurs publiables détaillés : [À COMPLÉTER].",
+          skills:["Reporting","KPI","Coordination"]
+        },
+        {
+          id:"run-it",
+          title:"Run IT régional",
+          category:["Coordination","ITIL"],
+          context:"Responsabilité de coordination / représentation Run IT sur un périmètre régional.",
+          problem:"Suivre la performance, coordonner les équipes et harmoniser les pratiques.",
+          role:"Suivi KPI, coordination, promotion des pratiques et contribution à l'amélioration de la performance.",
+          technologies:["KPI","SLA","Run IT","Reporting"],
+          approach:"Suivi des performances, analyse des écarts et coordination des actions.",
+          result:"Périmètre régional classé en tête sur la période documentée.",
+          impact:"Des indicateurs précis sont disponibles dans les éléments de travail ; à sélectionner avant publication : [À COMPLÉTER].",
+          skills:["Coordination","Performance","Service Management"]
+        }
+      ],
+
+      caseStudies: [
+        {
+          title:"Amélioration de la gestion des incidents majeurs",
+          category:"ITIL / Coordination",
+          steps:[
+            ["Situation","Un incident majeur a mis en évidence des insuffisances dans le processus de gestion et de communication."],
+            ["Problème","Les écarts de processus devaient être identifiés et transformés en actions concrètes."],
+            ["Analyse","Analyse de la situation, des comportements observés et de leur impact, avec une logique SBI."],
+            ["Action","Formalisation des réponses : catalogue de service, procédures, communication et plan Qui/Fait/Quoi/Quand."],
+            ["Résultat","Mise en place d'un plan d'amélioration et suivi dans le cadre du COPIQ."],
+            ["Enseignement","Un incident majeur doit produire non seulement une résolution, mais aussi une amélioration durable du système de service."]
+          ]
+        },
+        {
+          title:"Pilotage de la performance Run IT",
+          category:"Coordination / KPI",
+          steps:[
+            ["Situation","Suivi de la performance du support sur un périmètre régional."],
+            ["Problème","Identifier les écarts de performance et agir sur les facteurs qui pénalisent les SLA."],
+            ["Analyse","Lecture des KPI, comparaison des performances et suivi des points de faiblesse."],
+            ["Action","Coordination, suivi des actions et harmonisation des pratiques."],
+            ["Résultat","Périmètre régional classé en tête de performance sur la période documentée."],
+            ["Enseignement","Un KPI n'est utile que lorsqu'il déclenche une action et permet de mesurer son effet."]
+          ]
+        }
+      ],
+
+      learning: [
+        {title:"Master professionnel en Management des Systèmes d'Information & Data", status:"Objectif", className:"status-target", text:"Projet de formation identifié ; statut d'admission / inscription : [À COMPLÉTER]."},
+        {title:"Azure / Azure Stack HCI", status:"Développement", className:"status-progress", text:"Approfondissement de la transformation des infrastructures et des environnements hybrides."},
+        {title:"VMCE / Veeam", status:"Objectif", className:"status-target", text:"Certification visée selon le parcours de développement professionnel."},
+        {title:"NSE / sécurité réseau", status:"Objectif", className:"status-target", text:"Développement des compétences autour des environnements réseau et sécurité."},
+        {title:"ITIL / Service Management", status:"En pratique", className:"status-progress", text:"Approfondissement par l'application opérationnelle : incidents, SLA, KPI et amélioration continue."},
+        {title:"Management des systèmes d'information", status:"Développement", className:"status-progress", text:"Construction progressive d'une capacité de pilotage et de coordination."}
+      ]
+    };
+
+    /* =========================================================
+       RENDU DES DONNÉES
+       ========================================================= */
+    const $ = (s, root=document) => root.querySelector(s);
+    const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+
+    function renderSkills(){
+      $("#skillsGrid").innerHTML = CONFIG.skills.map((skill,i)=>`
+        <article class="card skill-card">
+          <div class="card-icon">${String(i+1).padStart(2,"0")}</div>
+          <h3>${skill.title}<small>${skill.exposure}</small></h3>
+          <ul class="skill-list">
+            ${skill.items.map(item=>`<li>${item}</li>`).join("")}
+          </ul>
+        </article>
+      `).join("");
+    }
+
+    function renderArchitecture(){
+      $("#archFlow").innerHTML = CONFIG.architecture.map((item,i)=>`
+        <button class="arch-node" type="button" data-arch="${item.id}">
+          <strong>${item.title}</strong><span>Explorer →</span>
+        </button>
+        ${i < CONFIG.architecture.length-1 ? `<div class="arch-arrow" aria-hidden="true">↓</div>` : ""}
+      `).join("");
+
+      $$(".arch-node").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          const item = CONFIG.architecture.find(x=>x.id===btn.dataset.arch);
+          $("#archDetails").innerHTML = `
+            <div class="card-icon">↗</div>
+            <h3>${item.title}</h3>
+            <p>${item.detail}</p>
+            <ul class="arch-detail-list">${item.tech.map(t=>`<li>${t}</li>`).join("")}</ul>
+          `;
+        });
+      });
+    }
+
+    const allCategories = ["Tous", ...new Set(CONFIG.projects.flatMap(p=>p.category))];
+
+    function renderProjects(filter="Tous"){
+      const list = filter==="Tous" ? CONFIG.projects : CONFIG.projects.filter(p=>p.category.includes(filter));
+      $("#projectsGrid").innerHTML = list.map(p=>`
+        <article class="card project-card">
+          <div class="project-top">
+            <div class="project-category">${p.category.join(" · ")}</div>
+          </div>
+          <h3>${p.title}</h3>
+          <p>${p.context}</p>
+          <div class="project-result">${p.result}</div>
+          <div class="tag-row">${p.technologies.slice(0,4).map(t=>`<span class="tag">${t}</span>`).join("")}</div>
+          <button class="btn btn-secondary project-open" data-project="${p.id}" style="margin-top:20px">Voir le détail →</button>
+        </article>
+      `).join("") || `<div class="empty">Aucun projet dans cette catégorie.</div>`;
+
+      $$(".project-open").forEach(btn=>btn.addEventListener("click",()=>openProject(btn.dataset.project)));
+    }
+
+    function renderFilters(){
+      $("#projectFilters").innerHTML = allCategories.map((cat,i)=>
+        `<button class="filter ${i===0?"active":""}" type="button" data-filter="${cat}">${cat}</button>`
+      ).join("");
+      $$(".filter").forEach(btn=>{
+        btn.addEventListener("click",()=>{
+          $$(".filter").forEach(x=>x.classList.remove("active"));
+          btn.classList.add("active");
+          renderProjects(btn.dataset.filter);
+        });
+      });
+    }
+
+    function openProject(id){
+      const p = CONFIG.projects.find(x=>x.id===id);
+      if(!p) return;
+      $("#modalCategory").textContent = p.category.join(" · ");
+      $("#modalTitle").textContent = p.title;
+      $("#modalBody").innerHTML = `
+        <div class="modal-grid">
+          <div class="modal-block"><h4>Contexte</h4><p>${p.context}</p></div>
+          <div class="modal-block"><h4>Problème</h4><p>${p.problem}</p></div>
+          <div class="modal-block"><h4>Mon rôle</h4><p>${p.role}</p></div>
+          <div class="modal-block"><h4>Technologies</h4><p>${p.technologies.join(" · ")}</p></div>
+          <div class="modal-block"><h4>Démarche</h4><p>${p.approach}</p></div>
+          <div class="modal-block"><h4>Résultat</h4><p>${p.result}</p></div>
+          <div class="modal-block"><h4>Impact</h4><p>${p.impact}</p></div>
+          <div class="modal-block"><h4>Compétences démontrées</h4><p>${p.skills.join(" · ")}</p></div>
+        </div>
+      `;
+      $("#projectModal").showModal();
+    }
+
+    function renderCases(){
+      $("#caseGrid").innerHTML = CONFIG.caseStudies.map(c=>`
+        <article class="card">
+          <div class="project-category">${c.category}</div>
+          <h3>${c.title}</h3>
+          ${c.steps.map(s=>`<div class="case-step"><b>${s[0]}</b><span>${s[1]}</span></div>`).join("")}
+        </article>
+      `).join("");
+    }
+
+    function renderLearning(){
+      $("#learningGrid").innerHTML = CONFIG.learning.map(x=>`
+        <article class="card">
+          <span class="status ${x.className}">${x.status}</span>
+          <h3 style="margin-top:14px">${x.title}</h3>
+          <p>${x.text}</p>
+        </article>
+      `).join("");
+    }
+
+    function applyProfile(){
+      document.title = `${CONFIG.profile.name} | ${CONFIG.profile.role}`;
+      $("#emailText").textContent = CONFIG.profile.email;
+      $("#phoneText").textContent = CONFIG.profile.phone;
+      $("#linkedinText").textContent = CONFIG.profile.linkedin;
+      $("#locationText").textContent = CONFIG.profile.location;
+
+      if(!CONFIG.profile.email.startsWith("[")){
+        $("#emailLink").href = `mailto:${CONFIG.profile.email}`;
+      } else {
+        $("#emailLink").href = "#";
+      }
+
+      if(!CONFIG.profile.phone.startsWith("[")){
+        $("#phoneLink").href = `tel:${CONFIG.profile.phone.replace(/\\s+/g,"")}`;
+      } else {
+        $("#phoneLink").href = "#";
+      }
+
+      if(!CONFIG.profile.linkedin.startsWith("[")){
+        $("#linkedinLink").href = CONFIG.profile.linkedin;
+      } else {
+        $("#linkedinLink").removeAttribute("target");
+        $("#linkedinLink").href = "#";
+      }
+
+      if(!CONFIG.profile.cv.startsWith("[")){
+        $("#cvBtn").href = CONFIG.profile.cv;
+        $("#cvBtn").removeAttribute("aria-disabled");
+        $("#cvBtn").setAttribute("download","");
+      }
+
+      $("#year").textContent = new Date().getFullYear();
+    }
+
+    /* =========================================================
+       UX : thème, menu, navigation active, retour haut
+       ========================================================= */
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    if(savedTheme){
+      document.documentElement.dataset.theme = savedTheme;
+    } else if(window.matchMedia("(prefers-color-scheme: light)").matches){
+      document.documentElement.dataset.theme = "light";
+    }
+
+    $("#themeBtn").addEventListener("click",()=>{
+      const next = document.documentElement.dataset.theme==="light" ? "dark" : "light";
+      document.documentElement.dataset.theme = next;
+      localStorage.setItem("portfolio-theme",next);
+    });
+
+    $("#menuBtn").addEventListener("click",()=>{
+      const open = $("#navLinks").classList.toggle("open");
+      $("#menuBtn").setAttribute("aria-expanded",String(open));
+    });
+
+    $$("#navLinks a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));
+
+    const sections = $$("main section[id]");
+    const navAnchors = $$("#navLinks a");
+    const observer = new IntersectionObserver(entries=>{
+      entries.forEach(entry=>{
+        if(entry.isIntersecting){
+          navAnchors.forEach(a=>a.classList.toggle("active",a.getAttribute("href")===`#${entry.target.id}`));
+        }
+      });
+    },{rootMargin:"-40% 0px -50% 0px",threshold:0});
+    sections.forEach(s=>observer.observe(s));
+
+    window.addEventListener("scroll",()=>{
+      $("#topBtn").style.display = window.scrollY>700 ? "block" : "none";
+    });
+    $("#topBtn").addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+    $("#modalClose").addEventListener("click",()=>$("#projectModal").close());
+    $("#projectModal").addEventListener("click",e=>{
+      if(e.target === $("#projectModal")) $("#projectModal").close();
+    });
+
+    $("#contactForm").addEventListener("submit",e=>{
+      e.preventDefault();
+      if(CONFIG.profile.email.startsWith("[")){
+        alert("Ajoutez d'abord votre adresse email dans CONFIG.profile.email.");
+        return;
+      }
+      const name = $("#name").value.trim();
+      const email = $("#contactEmail").value.trim();
+      const message = $("#message").value.trim();
+      const subject = encodeURIComponent(`Contact portfolio — ${name}`);
+      const body = encodeURIComponent(`Bonjour Edmond,\\n\\n${message}\\n\\nEmail du contact : ${email}`);
+      window.location.href = `mailto:${CONFIG.profile.email}?subject=${subject}&body=${body}`;
+    });
+
+    renderSkills();
+    renderArchitecture();
+    renderFilters();
+    renderProjects();
+    renderCases();
+    renderLearning();
+    applyProfile();
+  </script>
+</body>
+</html>
